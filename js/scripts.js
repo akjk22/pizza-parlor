@@ -12,7 +12,7 @@ Pizza.prototype.addSize = function() {
   return this.size;
 }
 Pizza.prototype.showPrice = function() {
-  if (this.toppings.includes('Mushrooms')) {
+  if ($('#check_id').is(":checked")) {
   return this.cost = 15;
   }
 }
@@ -23,8 +23,10 @@ Pizza.prototype.showPrice = function() {
 //user interface logic
 
 $(document).ready(function() {
-  $("form#price-show").submit(function(event) {
-    var mushrooms = $("#mushrooms[type='checkbox']").val();
+  // $("form#price-show").submit(function(event) 
+  $("button").click(function() {
+    var toppings = $('#check_id').val();
+    console.log(toppings);
     var peppers = $("#peppers[type='checkbox']").val();
     var extraCheese = $("#extraCheese[type='checkbox']").val();
     var medium = $("#medium[type='checkbox']").val();
@@ -33,7 +35,7 @@ $(document).ready(function() {
     
     // console.log(mushrooms);
 
-    var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
+    var price = new Pizza (toppings, peppers, extraCheese, medium, large, zaza);
     price.addToppings();
     price.addSize();
     price.showPrice();
