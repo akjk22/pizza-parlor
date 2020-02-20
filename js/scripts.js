@@ -1,5 +1,7 @@
 //back end logic
-
+function Pizza {
+  
+}
 
 
 
@@ -12,8 +14,11 @@
 
 $(document).ready(function() {
   $("form#price-show").submit(function(event) {
-    var mushrooms = $("input[type='checkbox']").val();
-    
+    var mushrooms = $("#mushrooms[type='checkbox']").val();
+    var peppers = $("#peppers[type='checkbox']").val();
+    var extraCheese = $("#extraCheese[type='checkbox']").val();
+    // console.log(mushrooms);
+
 
 
 
