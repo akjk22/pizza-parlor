@@ -30,10 +30,10 @@ $(document).ready(function() {
     var price = new Pizza (mushrooms, peppers, extraCheese);
     price.addToppings();
     price.addSize();
-    price.showPrice();
+    // price.showPrice();
 
 
-
+    $("#price-results").text("The cost of pizza is " + price.showPrice());
 
 
 
