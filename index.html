@@ -14,6 +14,9 @@
       /* height: 100vh;
       padding:0;
       margin:0; */
+      position: relative; /* usually the parent, in this case the body element, has position relative so that the absolute positioned child is positioned relative to it */
+      height: 100vh; /* 100% of the viewport height */
+      margin: 0; /* recommended */
     }
   </style>
   <link rel="stylesheet"
@@ -43,7 +46,7 @@
     <div class="row">
       <div class="col-md-6">
         <form id="price-show">
-          <div class="form-check">
+          <div class="form-check checkbox">
             <h2>Toppings</h2>
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
@@ -59,8 +62,8 @@
             <label class="form-check-label" for="defaultCheck1">
               Extra Cheese
             </label>
-            <br>
-            <br>
+          </div>
+          <div class="form-check checkbox2">
             <h2>Size</h2>
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">

@@ -5,3 +5,14 @@
 .text {
   color: #fff;
 }
+.checkbox {
+  /* text-align: center; */
+  margin: 280px auto 0 auto !important;
+  height: 100vh;
+  float: right;
+}
+.checkbox2 {
+  margin: 280px auto 0 auto !important;
+  height: 100vh;
+  float: left;
+}
