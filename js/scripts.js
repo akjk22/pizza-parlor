@@ -1,8 +1,7 @@
 //back end logic
-function Pizza(toppings, size, cost) {
+function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
-  this.cost = cost;
 }
 
 Pizza.prototype.addToppings = function() {
@@ -16,6 +15,31 @@ Pizza.prototype.showPrice = function() {
   return this.cost = 15;
   }
 }
+
+Pizza.prototype.calculatePrice = function () {
+  var totalPrice = 0;
+  var mushrooms = 0.25;
+  var peppers = 0.50;
+  var extracheese = 0.75;
+    if ($("#zaza").is(':checked')) {
+      this.totalPrice = 15;
+    } else if ($("#large").is(':checked')) {
+      this.totalPrice = 11;
+    } else if ($("#medium").is(':checked')) {
+      this.totalPrice = 8;
+    }
+
+    if ($("#mushrooms").is(':checked')) {
+      this.totalPrice += 0.25;
+    } else if ($("#peppers").is(':checked')) {
+      this.totalPrice += 0.50;
+    } else if ($("#extracheese").is(':checked')) {
+      this.totalPrice += 0.75;
+    } else if ($("#mushrooms").is(':checked') && $("#peppers").is(':checked') && $("#extracheese").is(':checked')) {
+      this.totalPrice += 1.00;
+    }
+      return this.totalPrice;
+  }
 
 
 
@@ -42,7 +66,8 @@ $(document).ready(function() {
     // price.showPrice();
 
 
-    $("#price-results").text("The cost of pizza is " + price.showPrice());
+    // $("#price-results").text("The cost of pizza is " + price.showPrice());
+    $("#price-results").text("The cost of your pizza is " +  price.calculatePrice());
     console.log(price.showPrice);
 
 
