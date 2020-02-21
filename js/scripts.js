@@ -5,10 +5,7 @@ function Pizza(toppings, size) {
 }
 
 Pizza.prototype.calculatePrice = function () {
-  var totalPrice = 0;
-  var mushrooms = 0.25;
-  var peppers = 0.50;
-  var extracheese = 0.75;
+ 
     if ($("#zaza").is(':checked')) {
       this.totalPrice = 15;
     } else if ($("#large").is(':checked')) {
@@ -34,6 +31,16 @@ Pizza.prototype.calculatePrice = function () {
     }
       return this.totalPrice;
   }
+  
+  Pizza.prototype.pizzaSize = function() {
+    if ($("#zaza").is(':checked')) {
+      this.size = 'zaza';
+    } else if ($("#large").is(':checked')) {
+      this.size = 'large';
+    } else if ($("#medium").is(':checked')) {
+      this.size = 'medium';
+    }
+  }
 
 
 //user interface logic
@@ -50,6 +57,6 @@ $(document).ready(function() {
 
     var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
-    $("#price-results").text("The cost of your pizza is " +  price.calculatePrice());
+    $("#price-results").text("You ordered a  " + " " + price.pizzaSize() + "sized pizza and the cost of your pizza is " +  price.calculatePrice());
   });
 });
