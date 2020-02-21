@@ -4,18 +4,6 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.addToppings = function() {
-  return this.toppings;
-}
-Pizza.prototype.addSize = function() {
-  return this.size;
-}
-Pizza.prototype.showPrice = function() {
-  if ($('#check_id').is(":checked")) {
-  return this.cost = 15;
-  }
-}
-
 Pizza.prototype.calculatePrice = function () {
   var totalPrice = 0;
   var mushrooms = 0.25;
@@ -42,35 +30,23 @@ Pizza.prototype.calculatePrice = function () {
   }
 
 
-
-
 //user interface logic
 
-$(document).ready(function() {
-  // $("form#price-show").submit(function(event) 
-  $("button").click(function() {
-    var toppings = $('#check_id').val();
-    console.log(toppings);
-    var peppers = $("#peppers[type='checkbox']").val();
-    var extraCheese = $("#extraCheese[type='checkbox']").val();
-    var medium = $("#medium[type='checkbox']").val();
-    var large = $("#large[type='checkbox']").val();
-    var zaza = $("#zaza[type='checkbox']").val();
-    
-    // console.log(mushrooms);
+$(document).ready(function() { 
+  $("form#price-show").submit(function(event) {
+    event.preventDefault();
+    var medium = $("input:checkbox[value=medium]:checked").val(); 
+    var large = $("input:checkbox[value=large]:checked").val();
+    var zaza = $("input:checkbox[value=zaza]:checked").val();
+    var mushrooms = $("input:checkbox[value=mushrooms]:checked").val();
+    // alert(mushrooms);
+    var peppers = $("input:checkbox[value=peppers]:checked").val();
+    // alert(peppers);
+    var extraCheese = $("input:checkbox[value=extracheese]:checked").val();
+    // alert(extraCheese);
 
-    var price = new Pizza (toppings, peppers, extraCheese, medium, large, zaza);
-    price.addToppings();
-    price.addSize();
-    price.showPrice();
-    // price.showPrice();
+    var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
-
-    // $("#price-results").text("The cost of pizza is " + price.showPrice());
     $("#price-results").text("The cost of your pizza is " +  price.calculatePrice());
-    console.log(price.showPrice);
-
-
-
-  })
+  });
 });
