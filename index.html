@@ -43,37 +43,34 @@
 <body class="background">
   <div class="container text">
     <h1 class="header">Zaza's Za</h1>
-    <form id="price-show">
+    <form id="price-show" name="pizzaorder">
       <div class="form-check checkbox">
-        <div class="form-check checkbox">
-          <h2>Toppings</h2>
-          <input class="form-check-input" type="checkbox" name="toppings" value="0.25" id="mushrooms">
-          Mushrooms ($0.25)
-          <br>
-          <input class="form-check-input" type="checkbox" name="toppings" value="0.50" id="peppers">
-          Mama Lil's Peppers ($0.50)
-          <br>
-          <input class="form-check-input" type="checkbox" name="toppings" value="0.75" id="extracheese">
-          Extra Cheese ($0.75)
-        </div>
-        <div class="form-check checkbox2" id="sizes">
-          <h2>Size</h2>
-          <input class="form-check-input" type="checkbox" name="sizes" value="medium" id="medium">
-          Medium ($8)
-          <br>
-          <input class="form-check-input" type="checkbox" name="sizes" value="large" id="large">
-          Large ($11)
-          <br>
-          <input class="form-check-input" type="checkbox" name="sizes" value="zaza" id="zaza">
-          Zaza ($15)
-          <br>
-          <br>
-          <button type="submit" class="btn-secondary price-btn">Order</button>
-        </div>
+        <h2>Toppings</h2>
+        <input class="form-check-input" type="checkbox" name="toppings" value="mushrooms" id="mushrooms">
+        Mushrooms ($0.25)
+        <br>
+        <input class="form-check-input" type="checkbox" name="toppings" value="peppers" id="peppers">
+        Mama Lil's Peppers ($0.50)
+        <br>
+        <input class="form-check-input" type="checkbox" name="toppings" value="extracheese" id="extracheese">
+        Extra Cheese ($0.75)
+      </div>
+      <div class="form-check checkbox2">
+        <h2>Size</h2>
+        <input class="form-check-input" type="checkbox" name="sizes" value="medium" id="medium">
+        Medium ($8)
+        <br>
+        <input class="form-check-input" type="checkbox" name="sizes" value="large" id="large">
+        Large ($11)
+        <br>
+        <input class="form-check-input" type="checkbox" name="sizes" value="zaza" id="zaza">
+        Zaza ($15)
+        <br>
+        <br>
+        <button type="submit" class="btn-secondary price-btn">Order</button>
+      </div>
     </form>
     <div id="price-results">
-    </div>
-    <div id="sum">
     </div>
   </div>
 </body>

@@ -30,6 +30,9 @@ Pizza.prototype.calculatePrice = function () {
   }
 
 
+
+
+
 //user interface logic
 
 $(document).ready(function() { 
@@ -44,16 +47,6 @@ $(document).ready(function() {
     // alert(peppers);
     var extraCheese = $("input:checkbox[value=extracheese]:checked").val();
     // alert(extraCheese);
-    var sum = 0;
-
-
-    $('#sizes :checkbox:checked').each(function(checkbox) {
-      sum = 0;
-      sum += parseInt(checkbox.value, 10);
-    });
-  alert(sum);
-    $('#sum').html(sum);
-
 
     var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
