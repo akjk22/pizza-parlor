@@ -17,20 +17,23 @@ Pizza.prototype.calculatePrice = function () {
       this.totalPrice = 8;
     }
 
-    if ($("#mushrooms").is(':checked')) {
+    if ($("#mushrooms").is(':checked') && $("#peppers").is(':checked') && $("#extracheese").is(':checked')) {
+      this.totalPrice += 1.50;
+    } else if ($("#mushrooms").is(':checked') && $("#peppers").is(':checked')) {
+      this.totalPrice += 0.75;
+    } else if ($("#mushrooms").is(':checked') && $("#extracheese").is(':checked')) {
+      this.totalPrice += 1.00;
+    } else if ($("#peppers").is(':checked') && $("#extracheese").is(':checked')) {
+      this.totalPrice += 1.25; 
+    } else if ($("#mushrooms").is(':checked')) {
       this.totalPrice += 0.25;
     } else if ($("#peppers").is(':checked')) {
       this.totalPrice += 0.50;
     } else if ($("#extracheese").is(':checked')) {
       this.totalPrice += 0.75;
-    } else if ($("#mushrooms").is(':checked') && $("#peppers").is(':checked') && $("#extracheese").is(':checked')) {
-      this.totalPrice += 1.00;
     }
       return this.totalPrice;
   }
-
-
-
 
 
 //user interface logic
@@ -42,11 +45,8 @@ $(document).ready(function() {
     var large = $("input:checkbox[value=large]:checked").val();
     var zaza = $("input:checkbox[value=zaza]:checked").val();
     var mushrooms = $("input:checkbox[value=mushrooms]:checked").val();
-    // alert(mushrooms);
     var peppers = $("input:checkbox[value=peppers]:checked").val();
-    // alert(peppers);
     var extraCheese = $("input:checkbox[value=extracheese]:checked").val();
-    // alert(extraCheese);
 
     var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
