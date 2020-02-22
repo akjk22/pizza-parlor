@@ -1,9 +1,11 @@
-//back end logic
+//Back end logic
+//Pizza constructor object
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
 }
 
+//Pizza prototype method that calculates price based on size and toppings chosen
 Pizza.prototype.calculatePrice = function () {
  
     if ($("#zaza").is(':checked')) {
@@ -31,7 +33,9 @@ Pizza.prototype.calculatePrice = function () {
     }
       return this.totalPrice;
   }
-  
+
+  // Pizza prototype method that returns your size, which can be used to display.
+
   Pizza.prototype.pizzaSize = function() {
     if ($("#zaza").is(':checked')) {
       this.size = 'zaza';
@@ -44,7 +48,7 @@ Pizza.prototype.calculatePrice = function () {
   }
 
 
-//user interface logic
+//User Interface Logic
 
 $(document).ready(function() { 
   $("form#price-show").submit(function(event) {
@@ -58,6 +62,7 @@ $(document).ready(function() {
 
     var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
-    $("#price-results").text("You ordered a  " + " " + price.pizzaSize() + " " + "sized pizza and the cost of your pizza is " +  price.calculatePrice());
+    $("#price-results").text("You ordered a  " + " " + price.pizzaSize() + " " + "sized pizza and the cost of your pizza is $" +  price.calculatePrice());
+    $('#test').html('<img src="img/zaza.jpg" height="300px" width="300px">');
   });
 });

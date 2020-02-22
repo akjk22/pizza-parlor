@@ -1,50 +1,25 @@
-.container {
-  /* margin: 0 auto;
-  text-align: center;
-  width: 600px;
-  height: 600px; */
-}
 .header {
   text-align: center;
   font-size: 56px;
+  color: #fff;
 }
-.header2 {
+#price-results {
+  margin-top: 20px;
+  color: #fff;
+  /* float: left; */
+}
+#test {
+  margin-top: 20px;
   text-align: center;
 }
-.text {
-  color: #000;
-}
-.box {
-  width: 250px;
-  height: 200px;
-  border: thin black solid;
-  display: inline-block
-}
-.checkbox {
-  /* text-align: center; */
-  /* margin: 280px auto 0 auto !important; */
-  /* height: 100vh; */
-  float: right;
-  display: inline-block;
-}
-.checkbox2 {
-  /* margin: 280px auto 0 auto !important; */
-  /* height: 100vh; */
-  float: left; 
 
-
-}
-
-/* #price-results {
-  margin-bottom: 0px;
-} */
-
+/* All button switch css below */
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  float:right;
+  float: right;
 }
 
 /* Hide default HTML checkbox */
