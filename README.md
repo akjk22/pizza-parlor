@@ -1,38 +1,91 @@
 # _Pizza Parlor Independent Project_
 
-#### _This project will display knowledge of object oriented Javascript. A user can choose different pizza toppings and a size and a price will display based on what they chose. 02/19/2020_
+#### _This project will display knowledge of object oriented Javascript. A user can choose one size and different pizza toppings, and a price will display based on what they chose. 02/19/2020_
 
 #### By _**Andrew Kim**_
 
 ## Description
 
-_This program will capture values based on topping and size selections in drop down menus.  Based on what the user chooses, the price will fluctuate and be displayed on the page. Based on the specs, the price returned may differ. The program will use an object constructor, as well as prototype methods to perform behaviors that will give the user a cost for the pizza._
+_This program will capture values based on topping and size selections in using css animated checkboxes. Based on what the user chooses, the price will fluctuate and be displayed on the page. Based on the specs below, the price returned may differ. The program will use an object constructor, as well as prototype methods to perform behaviors that will give the user a cost for the pizza and the size they picked. An image will also appear upon submitting their order._
 
 ## Specs
 
-* _The program returns a range of numbers from 0 to the users inputted number_
-  * _input_: "0"
-  *_output_: "0,1,2,3,4"
+* _The program returns a final cost and image based on what items (sizes and toppings, or lack thereof) are checked_
 
-* _Numbers that contain a 1 (unless it also has a 2 or 3 - "1" has the least precedence) will replace the number with a string "Beep!"_
-  * _input_: "51"
-  * _output_: "Beep!"
+* _Price ranges for medium sized pizzas_
+  * _checked_: "medium no toppings"
+  * _output_: "$8"
 
-* _Numbers that contain a 2 (unless it also has a 3 - "2" has the second highest precedence) will replace the number with a string "Boopp!"_
-  * _input_: "52"
-  * _output_: "Boop!"
+  * _checked_: "medium mushrooms topping"
+  * _output_: "$8.25"
 
-* _Numbers that contain a 2 (unless it also has a 3 - "3" having the highest precedence in behavior) will replace the number with a string "Boopp!"_
-  * _input_: "123"
-  * _output_: "I'm sorry, Dave. I'm afraid I can't do that!"
+  * _checked_: "medium peppers topping"
+  * _output_: "$8.50"
 
-* _With each number inputted, the user should see new results over and over again_
-  * _input 1_: "3"
-  * _output 1_: "0", "Beep", "Boop", "I'm sorry Dave. I'm afraid I can't do that!"
-  * _input 2_: "5"
-  * _output 2_: "0", "Beep", "Boop", "I'm sorry Dave. I'm afraid I can't do that!, 4, 5"
-* _There will also be secret numbers revealing an image, text, and animation_
+  * _checked_: "medium extra cheese topping"
+  * _output_: "$8.75"
 
+  * _checked_: "medium mushrooms and peppers toppings"
+  * _output_: "$8.75"
+
+  * _checked_: "medium mushrooms and extracheese toppings"
+  * _output_: "$9"
+
+  * _checked_: "medium peppers and extracheese toppings"
+  * _output_: "$9.25"
+
+  * _checked_: "medium all toppings"
+  * _output_: "$9.25"
+
+* _Price ranges for large sized pizzas_
+  * _checked_: "large no toppings"
+  * _output_: "$11"
+
+  * _checked_: "large mushrooms topping"
+  * _output_: "$11.25"
+
+  * _checked_: "large peppers topping"
+  * _output_: "$11.50"
+
+  * _checked_: "large extra cheese topping"
+  * _output_: "$11.75"
+
+  * _checked_: "large mushrooms and peppers toppings"
+  * _output_: "$11.75"
+
+  * _checked_: "large mushrooms and extracheese toppings"
+  * _output_: "$12"
+
+  * _checked_: "large peppers and extracheese toppings"
+  * _output_: "$12.25"
+
+  * _checked_: "large all toppings"
+  * _output_: "$12.5"
+
+* _Price ranges for zaza (extra large) sized pizzas_
+  * _checked_: "zaza no toppings"
+  * _output_: "$15"
+
+  * _checked_: "zaza mushrooms topping"
+  * _output_: "$15.25"
+
+  * _checked_: "zaza peppers topping"
+  * _output_: "$15.50"
+
+  * _checked_: "zaza extra cheese topping"
+  * _output_: "$15.75"
+
+  * _checked_: "zaza mushrooms and peppers toppings"
+  * _output_: "$15.75"
+
+  * _checked_: "zaza mushrooms and extracheese toppings"
+  * _output_: "$16"
+
+  * _checked_: "zaza peppers and extracheese toppings"
+  * _output_: "$16.25"
+
+  * _checked_: "zaza all toppings"
+  * _output_: "$16.5"
 
 
 ## Setup/Installation Requirements
