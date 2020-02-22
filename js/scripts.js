@@ -40,6 +40,7 @@ Pizza.prototype.calculatePrice = function () {
     } else if ($("#medium").is(':checked')) {
       this.size = 'medium';
     }
+    return this.size;
   }
 
 
@@ -57,6 +58,6 @@ $(document).ready(function() {
 
     var price = new Pizza (mushrooms, peppers, extraCheese, medium, large, zaza);
 
-    $("#price-results").text("You ordered a  " + " " + price.pizzaSize() + "sized pizza and the cost of your pizza is " +  price.calculatePrice());
+    $("#price-results").text("You ordered a  " + " " + price.pizzaSize() + " " + "sized pizza and the cost of your pizza is " +  price.calculatePrice());
   });
 });
