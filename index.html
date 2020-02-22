@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
   <style>
     body {
       /* background-image: href="img/cheese.gif"; */
@@ -14,15 +19,15 @@
       /* height: 100vh;
       padding:0;
       margin:0; */
-      position: relative; /* usually the parent, in this case the body element, has position relative so that the absolute positioned child is positioned relative to it */
-      height: 100vh; /* 100% of the viewport height */
-      margin: 0; /* recommended */
     }
   </style>
-  <!-- <link rel="stylesheet"
+
+
+<!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous">  -->
+      crossorigin="anonymous">
       <link href="css/styles.css" rel="stylesheet"
       type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -33,66 +38,68 @@
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"></script>
-    <!-- <script
+   <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"></script> -->
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
-<body class="background">
-  <div class="container text">
-    <h1 class="header">Zaza's Za</h1>
-    <form id="price-show" name="pizzaorder">
-      <div class="form-check checkbox box">
-        <h2>Toppings</h2>
-        <input class="form-check-input" type="checkbox" name="toppings" value="mushrooms" id="mushrooms">
-        Mushrooms ($0.25)
-        <br>
-        <input class="form-check-input" type="checkbox" name="toppings" value="peppers" id="peppers">
-        Mama Lil's Peppers ($0.50)
-        <br>
-        <input class="form-check-input" type="checkbox" name="toppings" value="extracheese" id="extracheese">
-        Extra Cheese ($0.75)
+<div class="container">
+  <h1 class="header">Zaza's Za</h1>
+  <h3 class="header2">Please order one pizza</h3>
+  <form id="price-show" name="pizzaorder">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="margin:50px 0"> 
+        <!-- Default panel contents -->
+        <div class="card-header">Size</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Medium  ($8)
+            <label class="switch ">
+              <input type="checkbox" class="primary" id="medium" value="medium">
+              <span class="slider round"></span> </label>
+          </li>
+          <li class="list-group-item"> Large ($11)
+            <label class="switch ">
+              <input type="checkbox" class="primary" id="large" value="large">
+              <span class="slider round"></span> </label>
+          </li>
+          <li class="list-group-item"> Zaza ($15)
+            <label class="switch ">
+              <input type="checkbox" class="primary" id="zaza" value="zaza">
+              <span class="slider round"></span> </label>
+          </li>
+        </ul>
       </div>
-      <div class="form-check checkbox2 box">
-        <h2>Sizes</h2>
-        <input class="form-check-input" type="radio" name="exampleRadios" id="medium" value="medium" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          Medium ($8)
-        </label>
-        <br>
-        <input class="form-check-input" type="radio" name="exampleRadios" id="large" value="large">
-        <label class="form-check-label" for="exampleRadios2">
-          Large ($11)
-        </label>
-        <br>
-        <input class="form-check-input" type="radio" name="exampleRadios" id="zaza" value="zaza">
-        <label class="form-check-label" for="exampleRadios2">
-          Zaza ($15)
-        </label>
-        <br>
-        <br>
-        <button type="submit" class="btn-secondary price-btn">Order</button>
-      </div>
-      <!-- <div class="form-check checkbox2">
-        <h2>Size</h2>
-        <input class="form-check-input" type="checkbox" name="sizes" value="medium" id="medium">
-        Medium ($8)
-        <br>
-        <input class="form-check-input" type="checkbox" name="sizes" value="large" id="large">
-        Large ($11)
-        <br>
-        <input class="form-check-input" type="checkbox" name="sizes" value="zaza" id="zaza">
-        Zaza ($15)
-        <br>
-        <br>
-        <button type="submit" class="btn-secondary price-btn">Order</button>
-      </div> -->
-    </form>
-    <div id="price-results">
     </div>
+    <div class="col-md-6">
+      <div class="card" style="margin:50px 0"> 
+        <!-- Default panel contents -->
+        <div class="card-header">Toppings</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Mushrooms ($0.25)
+            <label class="switch ">
+              <input type="checkbox" class="primary" name="toppings" value="mushrooms" id="mushrooms">
+              <span class="slider round"></span> </label>
+          </li>
+          <li class="list-group-item"> Peppers ($0.50)
+            <label class="switch ">
+              <input type="checkbox" class="primary" name="toppings" value="peppers" id="peppers">
+              <span class="slider round"></span> </label>
+          </li>
+          <li class="list-group-item"> Extra Cheese ($0.75)
+            <label class="switch ">
+              <input type="checkbox" class="primary" name="toppings" value="extracheese" id="extracheese">
+              <span class="slider round"></span> </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-lg btn-primary price-btn">Order</button>
   </div>
-</body>
-</html>
+  </form>
+  <div id="price-results">
+  </div>
+</div>
